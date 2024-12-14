@@ -93,9 +93,11 @@ const BottomSheet = ({ isVisible, onClose, children }: BottomSheetProps) => {
             style={styles.contentWrapper}
             onStartShouldSetResponder={(e) => true}
           >
-            <ScrollView contentContainerStyle={styles.content}>
-              {children}
-            </ScrollView>
+            <TouchableWithoutFeedback onPress={()=>{}}>
+              <ScrollView contentContainerStyle={styles.content}>
+                {children}
+              </ScrollView>
+            </TouchableWithoutFeedback>
           </View>
         </View>
       </Animated.View>
